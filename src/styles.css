@@ -1,0 +1,64 @@
+body {
+  background-color: #1c262f;
+}
+
+#container {
+  margin-top: 5vh;
+  font-family: "Fira Code", monospace;
+}
+
+.textPrimary {
+  font-size: 2em;
+  color: #32ae85;
+}
+
+ul li {
+  list-style: none;
+  font-size: 2em;
+}
+ul li > a {
+  text-decoration: none;
+  color: #d6e9ff;
+}
+
+#header {
+  font-size: 2em;
+  color: #d6e9ff;
+  text-align: center;
+}
+#header > #condition {
+  cursor: pointer;
+}
+
+#work {
+  color: #32ae85;
+}
+
+#content {
+  margin-top: 5vh;
+  display: flex;
+}
+
+#afterWorkContent {
+  display: none;
+}
+
+#links {
+  flex: 6;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#image {
+  flex: 6;
+}
+#image > img {
+  border-radius: 1em;
+}
+
+.card {
+  flex: 4;
+  padding: 4em;
+}
+
+/*# sourceMappingURL=styles.css.map */

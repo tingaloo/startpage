@@ -1,0 +1,69 @@
+$text-secondary: #d6e9ff;
+$text-primary: #32ae85;
+$background: #1c262f;
+// $background: #121212;
+
+body {
+    background-color: $background;
+
+}
+
+#container {
+    margin-top: 5vh;
+    font-family: 'Fira Code', monospace;
+}
+
+.textPrimary {
+    font-size: 2em;
+    color: $text-primary;
+}
+
+ul li {
+    list-style:none;
+    font-size: 2em;
+    >a {
+    text-decoration: none;
+    color: $text-secondary;
+}
+}
+
+#header {
+    font-size: 2em;
+    color: $text-secondary;
+ text-align: center;
+    > #condition {
+        cursor: pointer;
+
+    }
+}
+
+#work {
+    color: $text-primary;
+}
+
+#content {
+    margin-top: 5vh;
+    display: flex;
+}
+
+#afterWorkContent {
+    display:none;
+}
+
+#links {
+    flex: 6;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#image {
+    flex: 6;    
+    > img {
+        border-radius: 1em;
+    }
+}
+
+.card {
+    flex: 4;
+    padding: 4em;
+}

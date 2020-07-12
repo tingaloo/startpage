@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
+    <title>
+        StartPage
+    </title>
+</head>
+
+<body>
+    <main role="main" id="container">
+        <section>
+            <div id="header">
+                <h1 id="condition" onClick="toggleWork()">
+                    <span id="work">Work</span>/<span id="afterWork">.</span></h1>
+                <h2 id="time">00:00:00</h2>
+            </div>
+        </section>
+        <section id="content">
+            <div id="links">
+                <div class="card">
+                    <p class="textPrimary">Development</p>
+
+                    <ul>
+                        <li><a href="">Bitbucket</a></li>
+                        <li><a href="">Confluence</a></li>
+                        <li><a href="">Jenkins</a></li>
+                        <li><a href="">Release Notes</a></li>
+                        <li><a href="">Nexus</a></li>
+                        <li><a href="">Pull Requests</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <p class="textPrimary">Overhead</p>
+
+                    <ul>
+                        <li><a href="">Email</a></li>
+                        <li><a href="">Timesheets</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <p class="textPrimary"> Environments</p>
+                    <ul>
+                        <li><a href="">Local</li>
+                        <li><a href="">Dev</a></li>
+                        <li><a href="">Integration</a></li>
+                        <li><a href="">Test</a></li>
+                    </ul>
+                </div>
+
+                <div id="image">
+                    <img src="https://picsum.photos/400" alt="Random aesthetic image">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="afterWorkContent">
+            <div id="links">
+                <div class="card">
+                    <h2 class="textPrimary">Timesink</h2>
+
+                    <ul>
+                        <li><a href="">Steezy</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">Reddit</a></li>
+                        <li><a href="">R/StartPages</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2 class="textPrimary">Bills</h2>
+                    <ul>
+                        <li><a href="">Chase</a></li>
+                        <li><a href="">Bank of America</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+        </section>
+    </main>
+
+    <script>        
+    let working = true;
+        setDate();
+
+    function setDate() {
+        var date = new Date;
+
+var seconds = date.getSeconds();
+    var minutes = date.getMinutes();
+    var hour = date.getHours();
+    
+    var year = date.getFullYear();
+    var month = date.getMonth(); // beware: January = 0; February = 1, etc.
+    var day = date.getDate();
+    
+            document.getElementById("time").innerText=`${hour}:${minutes}:${seconds}`
+    }
+        setInterval(function() { setDate();
+        }, 1000);
+
+        function toggleWork() {
+            console.log('hi')
+            let content = document.getElementById("content");
+            let afterWorkContent = document.getElementById("afterWorkContent");
+            let workText = document.getElementById("work");
+            let afterWorkText = document.getElementById("afterWork");
+            let green ="#32ae85";
+            let white = '#d6e9ff';
+
+            if (working) {
+                content.style.display="none";
+                afterWorkContent.style.display="block";
+                workText.style.color=white;
+                afterWorkText.style.color=green;
+                working = false;
+            } else {
+                afterWorkContent.style.display="none";
+                content.style.display="block";
+                afterWorkText.style.color=white;
+                workText.style.color=green;
+
+                working = true;
+            }
+        }
+
+
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        toggleWork();
+    }
+}
+    </script>
+</body>
+
+</html>
