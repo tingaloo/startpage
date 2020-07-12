@@ -2,7 +2,7 @@
 
 A startpage to isolate work and after work stuff.
 
-Theme base off of [https://atom.io/themes/duotone-dark-sea-syntax](Dark Sea)
+Theme based off of [Duotone Dark Sea](https://atom.io/themes/duotone-dark-sea-syntax)
 
 ## Quick start using browser-sync
 
